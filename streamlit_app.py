@@ -59,13 +59,7 @@ with pestaña4:
     option2 = st.selectbox(
         "Elige un año",
         ("2022","2023"))
-    assert 'Departamento' in fila_max_repeticiones.columns, "La columna 'Departamento' no existe en el DataFrame."
-    assert 'Donantes' in fila_max_repeticiones.columns, "La columna 'Donantes' no existe en el DataFrame."
-    fila_max_repeticiones = fila_max_repeticiones.sort_values('Donantes', ascending=False)
-    fig, ax = plt.subplots()
-    ax.bar(fila_max_repeticiones['Departamento'], fila_max_repeticiones['Donantes'])
-    plt.xticks(rotation=90)
-    plt.show()
+    
 
 with pestaña5:
     st.title("Condición de donante de órganos por países")

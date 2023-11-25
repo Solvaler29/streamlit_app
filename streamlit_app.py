@@ -52,14 +52,15 @@ with pestaña3:
 
 with pestaña4:
     st.title("Condición de donante de órganos por departamentos")
-    option = st.selectbox(
-        "Elije un departamento",
-        ("Amazonas", "Áncash","Apurímac","Arequipa","Ayacucho","Cajamarca","Cusco","Huancavelica","Huánuco","Ica","Junín","La Libertad","Lambayeque","Lima","Loreto","Madre de Dios","Moquegua","Pasco","Piura","Puno","San Martín","Tacna","Tumbes","Callao","Ucayali"))
-    option2 = st.selectbox(
+    option0 = st.selectbox(
         "Elige un año",
         ("2022","2023"))
-    chart_data = pd.DataFrame(np.random.randn(20, 1), columns=["a"])
-    st.bar_chart(chart_data)
+    if option0 == "2022":
+        chart_data = pd.DataFrame(np.random.randn(20, 1), columns=["a"])
+        st.bar_chart(chart_data)
+    elif option0 == "2023":
+        chart_data1 = pd.DataFrame(np.random.randn(20, 1), columns=["a"])
+        st.bar_chart(chart_data1)
 
 with pestaña5:
     st.title("Condición de donante de órganos por países")

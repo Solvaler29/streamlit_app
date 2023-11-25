@@ -58,21 +58,21 @@ with pestaña4:
     if option0 == "2022":
         chart_data = pd.DataFrame(
             {
-                "Donantes": list(range(20)) * 3,
-                "No donantes": np.random.randn(60),
-                "No especifica": ["A"] * 20 + ["B"] * 20 + ["C"] * 20,
+                "Cantidad": list(range(20)) * 3,
+                "Departamentos": np.random.randn(60),
+                "Condición de donante": ["A"] * 20 + ["B"] * 20 + ["C"] * 20,
             }
         )
-        st.bar_chart(chart_data, x="Donantes", y="No donantes", color="No especifica")
+        st.bar_chart(chart_data, x="Cantidad", y="Departamentos", color="Condición de donante")
     elif option0 == "2023":
         chart_data = pd.DataFrame(
             {
-                "Donantes": list(range(20)) * 3,
-                "No donantes": np.random.randn(60),
-                "No especifica": ["A"] * 20 + ["B"] * 20 + ["C"] * 20,
+                "Cantidad": list(range(20)) * 3,
+                "Departamento": np.random.randn(60),
+                "Condición de donante": ["A"] * 20 + ["B"] * 20 + ["C"] * 20,
             }
         )
-        st.bar_chart(chart_data, x="Donantes", y="No donantes", color="No especifica")
+        st.bar_chart(chart_data, x="Cantidad", y="Departamentos", color="Condicón de donante")
 
 with pestaña5:
     st.title("Condición de donante de órganos por países")

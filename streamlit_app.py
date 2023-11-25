@@ -59,7 +59,7 @@ with pestaña4:
         data = pd.DataFrame(
             {
              "Departamentos":["Áncash","Amazonas","Apurímac","Arequipa","Ayacucho","Cajamarca","Callao","Cusco","Huánuco","Huancavelica","Ica","Junín","La Libertad","Lambayeque","Lima","Loreto","Madre de Dios","Moquegua","Pasco","Piura","Puno","San Martín","Tacna","Tumbes"],
-             "Cantidad":[4,5,6,7,8,5,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3]
+             "Cantidad":np.random.randn(60)
             }
         )
         st.bar_chart(data, x="Departamentos", y="Cantidad")

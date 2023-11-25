@@ -62,7 +62,7 @@ with pestaña4:
              "Cantidad":[4,5,6,7,8,5,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3]
             }
         )
-        st.bar_chart(data)
+        st.bar_chart(data, x="Departamentos", y="Cantidad")
     elif option0 == "2023":
         chart_data = pd.DataFrame(np.random.randn(25, 1), columns=["cantidad"])
         st.bar_chart(chart_data)

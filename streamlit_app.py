@@ -58,7 +58,7 @@ with pestaña4:
     if option0 == "2022":
         data = pd.DataFrame(
             {
-             "Departamentos":list(range(20)) * 3,
+             "Departamentos":list(range(20)) * 1,
              "Cantidad":np.random.randn(60)
             }
         )

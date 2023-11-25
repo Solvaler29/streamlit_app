@@ -60,7 +60,7 @@ with pestaña4:
         chart_data = pd.DataFrame(
             {
                 "Departamento": list(range(20)) * 3,
-                "Cantidad": np.random.randn(20),
+                "Cantidad": np.random.randn(60),
                 "Condición de donante": ["Donante"] * 20 + ["No donante"] * 20 + ["No especifica"] * 20,
             }
         )

@@ -55,11 +55,11 @@ with pestaña4:
     option0 = st.selectbox(
         "Elige un año",
         ("2022","2023"))
-    mylist = ["Áncash","Amazonas","Apurímac","Arequipa","Ayacucho","Cajamarca","Callao","Cusco","Huánuco","Huancavelica","Ica","Junín","La Libertad","Lambayeque","Lima","Loreto","Madre de Dios","Moquegua","Pasco","Piura","Puno","San Martín","Tacna","Tumbes","Ucayali"]
+    mylist = ["Áncash","Amazonas","Apurímac","Arequipa","Ayacucho","Cajamarca","Callao","Cusco","Huánuco","Huancavelica","Ica","Junín","La Libertad","Lambayeque","Lima","Loreto","Madre de Dios","Moquegua","Pasco","Piura","Puno","San Martín","Tacna","Tumbes",]
     if option0 == "2022":
         chart_data = pd.DataFrame(
             {
-                "Departamento": list[(range(20))] * 3,
+                "Departamento": list(range(20)) * 3,
                 "Cantidad": np.random.randn(60),
                 "Condición de donante": ["Donante"] * 20 + ["No donante"] * 20 + ["No especifica"] * 20,
             }

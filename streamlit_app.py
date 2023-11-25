@@ -57,16 +57,10 @@ with pestaña4:
         ("2022","2023"))
     mylist = ["Áncash","Amazonas","Apurímac","Arequipa","Ayacucho","Cajamarca","Callao","Cusco","Huánuco","Huancavelica","Ica","Junín","La Libertad","Lambayeque","Lima","Loreto","Madre de Dios","Moquegua","Pasco","Piura","Puno","San Martín","Tacna","Tumbes",]
     if option0 == "2022":
-        chart_data = pd.DataFrame(
-            {
-                "col1": list(range(20)) * 3,
-                "col2": np.random.randn(60),
-                "col3": ["A"] * 20 + ["B"] * 20 + ["C"] * 20,
-            }
-        )
-        st.bar_chart(chart_data, x="col1", y="col2", color="col3")
+        chart_data = pd.DataFrame(np.random.randn(20, 1), columns=["Donantes"])
+        st.bar_chart(chart_data))
     elif option0 == "2023":
-        chart_data = pd.DataFrame(np.random.randn(20, 1), columns=["a"])
+        chart_data = pd.DataFrame(np.random.randn(20, 1), columns=["Donantes"])
         st.bar_chart(chart_data)
 
 with pestaña5:

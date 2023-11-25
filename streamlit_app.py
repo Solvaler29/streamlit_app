@@ -56,10 +56,12 @@ with pestaña4:
         "Elige un año",
         ("2022","2023"))
     if option0 == "2022":
-        data = pd.DataFrame({
-            "Departamentos":["Áncash","Amazonas","Apurímac","Arequipa","Ayacucho","Cajamarca","Callao","Cusco","Huánuco","Huancavelica","Ica","Junín","La Libertad","Lambayeque","Lima","Loreto","Madre de Dios","Moquegua","Pasco","Piura","Puno","San Martín","Tacna","Tumbes"],
-            "Cantidad":[4,5,6,7,8,5,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3]
-        })
+        data = pd.DataFrame(
+            {
+             "Departamentos":["Áncash","Amazonas","Apurímac","Arequipa","Ayacucho","Cajamarca","Callao","Cusco","Huánuco","Huancavelica","Ica","Junín","La Libertad","Lambayeque","Lima","Loreto","Madre de Dios","Moquegua","Pasco","Piura","Puno","San Martín","Tacna","Tumbes"],
+             "Cantidad":[4,5,6,7,8,5,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3]
+            }
+        )
         st.bar_chart(data)
     elif option0 == "2023":
         chart_data = pd.DataFrame(np.random.randn(25, 1), columns=["cantidad"])

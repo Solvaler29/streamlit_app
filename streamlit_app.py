@@ -56,11 +56,23 @@ with pestaña4:
         "Elige un año",
         ("2022","2023"))
     if option0 == "2022":
-        chart_data = pd.DataFrame(np.random.randn(20, 1), columns=["a"])
-        st.bar_chart(chart_data)
+        chart_data = pd.DataFrame(
+            {
+                "col1": list(range(20)) * 3,
+                "col2": np.random.randn(60),
+                "col3": ["A"] * 20 + ["B"] * 20 + ["C"] * 20,
+            }
+        )
+        st.bar_chart(chart_data, x="col1", y="col2", color="col3")
     elif option0 == "2023":
-        chart_data1 = pd.DataFrame(np.random.randn(20, 1), columns=["a"])
-        st.bar_chart(chart_data1)
+        chart_data = pd.DataFrame(
+            {
+                "col1": list(range(20)) * 3,
+                "col2": np.random.randn(60),
+                "col3": ["A"] * 20 + ["B"] * 20 + ["C"] * 20,
+            }
+        )
+        st.bar_chart(chart_data, x="col1", y="col2", color="col3")
 
 with pestaña5:
     st.title("Condición de donante de órganos por países")

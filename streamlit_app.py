@@ -64,7 +64,7 @@ with pestaña4:
                 "col3": ["Donante"] * 20,
             }
         )
-        st.bar_chart(chart_data, x="Departamentos", y="Cantidad", color=" ")
+        st.bar_chart(chart_data, x="Departamentos", y="Cantidad", color="Donate")
     elif option0 == "2023":
         chart_data = pd.DataFrame(np.random.randn(20, 1), columns=["a"])
         st.bar_chart(chart_data)

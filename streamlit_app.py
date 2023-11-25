@@ -58,7 +58,7 @@ with pestaña4:
     if option0 == "2022":
         data = pd.DataFrame(
             {
-             "Departamentos":list["Áncash","Amazonas","Apurímac","Arequipa","Ayacucho","Cajamarca","Callao","Cusco","Huánuco","Huancavelica","Ica","Junín","La Libertad","Lambayeque","Lima","Loreto","Madre de Dios","Moquegua","Pasco","Piura","Puno","San Martín","Tacna","Tumbes"],
+             "Departamentos":list(range(20)) * 3,
              "Cantidad":np.random.randn(60)
             }
         )

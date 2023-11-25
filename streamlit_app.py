@@ -57,7 +57,7 @@ with pestaña4:
         ("2022","2023"))
     if option0 == "2022":
         data = pd.read_csv("Junio2022de18a80años.csv")
-        chart_data = pd.data(np.random.randn(25, 1), columns=["cantidad"])
+        chart_data = pd.DataFrame(np.random.randn(25, 1), columns=["cantidad"])
         st.bar_chart(chart_data)
     elif option0 == "2023":
         chart_data = pd.DataFrame(np.random.randn(25, 1), columns=["cantidad"])

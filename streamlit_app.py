@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from PIL import Image
+import matplotlib.pyplot as plt
 
 titulos_pestanas = ['Página principal', 'Nacional', 'Internacional','Departamentos','Países','Sobre nosotras']
 pestaña1, pestaña2, pestaña3, pestaña4, pestaña5, pestaña6 = st.tabs(titulos_pestanas)
@@ -57,8 +58,9 @@ with pestaña4:
         ("2022","2023"))
     if option0 == "2022":
         data = pd.read_csv("Junio2022de18a80años.csv")
-        chart_data = pd.DataFrame(np.random.randn(25, 1), columns=["cantidad"])
-        st.bar_chart(chart_data)
+        fig, ax = plt.subplots()
+        ax.bar(data['Categoría'], data['Valor'])
+        st.pyplot(fig)
     elif option0 == "2023":
         chart_data = pd.DataFrame(np.random.randn(25, 1), columns=["cantidad"])
         st.bar_chart(chart_data)

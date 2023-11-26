@@ -63,8 +63,6 @@ with pestaña4:
     elif option0 == "2023":
         df = pd.read_csv("df_si_aceptan_peru_mar23.csv")
         df[['Departamento',"Donacion","Cantidad"]]
-        chart_data = pd.DataFrame(np.random.randn(25, 1), columns=["cantidad"])
-        st.bar_chart(chart_data)
         chart_data = pd.DataFrame(
             {"Departamentos": list(range(20)), "Cantidad": np.random.randn(20)}
         )

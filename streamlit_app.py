@@ -66,10 +66,10 @@ with pestaña4:
         chart_data = pd.DataFrame(np.random.randn(25, 1), columns=["cantidad"])
         st.bar_chart(chart_data)
         chart_data = pd.DataFrame(
-            {"col1": list(range(20)), "col2": np.random.randn(20), "col3": np.random.randn(20)}
+            {"Departamentos": list(range(20)), "Cantidad": np.random.randn(20)}
         )
         st.bar_chart(
-            chart_data, x="col1", y=["col2", "col3"], color=["#FF0000", "#0000FF"]  # Optional
+            chart_data, x="Departamentos", y=["Cantidad"]
         )
 
 with pestaña5:

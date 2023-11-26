@@ -68,7 +68,7 @@ with pestaña4:
             {"Departamento": list(lista1[:24]), "Cantidad": np.random.randn(24)}
         )
         st.bar_chart(
-            chart_data, x="Departamentos", y=["Cantidad"]
+            chart_data, x="Departamento", y=["Cantidad"]
         )
 
 with pestaña5:

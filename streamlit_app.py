@@ -59,13 +59,8 @@ with pestaña4:
     if option0 == "2022":
         df = pd.read_csv("marzo2022de18a80años(1).csv")
         df[['Departamento',"C_Donacion","Cantidad"]]
-        dep = ["Áncash","Amazonas","Apurímac","Arequipa","Ayacucho","Cajamarca","Callao","Cusco","Huánuco","Huancavelica","Ica","Junín","La Libertad","Lambayeque","Lima","Loreto","Madre de Dios","Moquegua","Pasco","Piura","Puno","San Martín","Tacna","Tumbes","Ucayali"]
-        chart_data = pd.DataFrame(
-            {"Departamento": list(), "col2": np.random.randn(20)}
-        )
-        st.bar_chart(
-            chart_data, x="col1", y=["col2"]  # Optional
-        )
+        dep = ["Áncash","Amazonas","Apurímac","Arequipa","Ayacucho","Cajamarca","Callao","Cusco","Huánuco","Huancavelica","Ica","Junín","La Libertad","Lambayeque","Lima","Loreto","Madre de Dios","Moquegua","Pasco","Piura","Puno","San Martín","Tacna","Tumbes",""]
+        print(dep)
         chart_data = pd.DataFrame(np.random.randn(25, 1), columns=["cantidad"])
         st.bar_chart(chart_data)
     elif option0 == "2023":

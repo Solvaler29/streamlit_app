@@ -2,6 +2,9 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from PIL import Image
+import plotly.express as px
+from plotly.subplots import make_subplots
+import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 
 titulos_pestanas = ['Página principal', 'Nacional', 'Internacional','Departamentos','Países','Sobre nosotras']
@@ -58,9 +61,7 @@ with pestaña4:
         ("2022","2023"))
     if option0 == "2022":
         data = pd.read_csv("Junio2022de18a80años.csv")
-        fig, ax = plt.subplots()
-        ax.bar(data['Categoría'], data['Valor'])
-        st.pyplot(fig)
+
     elif option0 == "2023":
         chart_data = pd.DataFrame(np.random.randn(25, 1), columns=["cantidad"])
         st.bar_chart(chart_data)

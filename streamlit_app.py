@@ -2,8 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from PIL import Image
-import pandas_profiling
-from streamlit_pandas_profiling import st_profile_report
+import pandas as pd
 
 st_profile_report(pr)
 titulos_pestanas = ['Página principal', 'Nacional', 'Internacional','Departamentos','Países','Sobre nosotras']
@@ -59,8 +58,6 @@ with pestaña4:
         "Elige un año",
         ("2022","2023"))
     if option0 == "2022":
-        df = pd.read_csv("https://storage.googleapis.com/tf-datasets/titanic/train.csv")
-        pr = df.profile_report()
         df = pd.read_csv("Junio2022de18a80años.csv")
         df[['Departamento',"C_Donacion","Cantidad"]]
         chart_data = pd.DataFrame(np.random.randn(25, 1), columns=["cantidad"])

@@ -65,7 +65,6 @@ with pestaña4:
         st.bar_chart(
             chart_data, x="Departamento", y=["Cantidad"]
         )
-        st.caption("Los datos de este gráfico no están actualizados a la fecha actual.")
         st.write("")
         st.write("El gráfico muestra la cantidad de personas que aceptaron donar sus órganos durante el año 2022.")
     elif option0 == "2023":

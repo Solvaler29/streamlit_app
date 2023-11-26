@@ -59,18 +59,14 @@ with pestaña4:
     if option0 == "2022":
         df = pd.read_csv("marzo2022de18a80años(1).csv")
         df[['Departamento',"C_Donacion","Cantidad"]]
-        "Donantes por Departamento"
-        source = pd.DataFrame({
-            'Cantidad' : [11657,109422,16666,185178,31964,62131,62131,95125,13218,29837,95206,58440,186959,110010,1575708,41149,20438,18486,14127,134095,38182,51936,27444,16078,40806]
-            'Departamentos' : ["Amazonas","Áncash","Apurímac","Arequipa","Ayacucho","Callao","Cajamarca","Cuzco","Huancavelica","Huánuco","Ica","Junín","La Libertad","Lambayeque","Lima","Loreto","Madre de Dios","Moquegua","Pasco","Piura","Puno","San Martín","Tacna","Tumbes","Ucayali"]
-        })
-        bar_chart = alt.Chart(source).mark_bar().encode(
-            y = 'Cantidad',
-            x = 'Departamentos'
+        chart_data = pd.DataFrame(
+            {
+                'Cantidad' : [11657,109422,16666,185178,31964,62131,62131,95125,13218,29837,95206,58440,186959,110010,1575708,41149,20438,18486,14127,134095,38182,51936,27444,16078,40806]
+                'Departamentos' : ["Amazonas","Áncash","Apurímac","Arequipa","Ayacucho","Callao","Cajamarca","Cuzco","Huancavelica","Huánuco","Ica","Junín","La Libertad","Lambayeque","Lima","Loreto","Madre de Dios","Moquegua","Pasco","Piura","Puno","San Martín","Tacna","Tumbes","Ucayali"]
+            
+            }
         )
-        st.altair_chart(bar_chart,use_container_width=True)
-        chart_data = pd.DataFrame(np.random.randn(25, 1), columns=["Cantidad"])
-        st.bar_chart(chart_data)
+        st.bar_chart(chart_data,x='Departamentos',y='Cantidad')
     elif option0 == "2023":
         df = pd.read_csv("df_si_aceptan_peru_mar23.csv")
         df[['Departamento',"Donacion","Cantidad"]]

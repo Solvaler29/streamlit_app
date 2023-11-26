@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 from PIL import Image
 import altair as alt
-from urllib.error import URLError
 
 titulos_pestanas = ['Página principal', 'Nacional', 'Internacional','Departamentos','Países','Sobre nosotras']
 pestaña1, pestaña2, pestaña3, pestaña4, pestaña5, pestaña6 = st.tabs(titulos_pestanas)
@@ -60,15 +59,18 @@ with pestaña4:
     if option0 == "2022":
         df = pd.read_csv("Junio2022de18a80años.csv")
         df[['Departamento',"C_Donacion","Cantidad"]]
+        "Donantes por Departamento"
+        source = pd.DataFrame({
+            "Cantidad" : df['Cantidad']
+            "Departamentos" : df['Departamento']
+        })
+        bar_chart = alt.Chart(source).mark_bar().encode(
+            y = "Cantidad",
+            x = "Departamentos",
+        )
+        st.altair_chart(bar_chart,use_container_width=True)
         chart_data = pd.DataFrame(np.random.randn(25, 1), columns=["Cantidad"])
         st.bar_chart(chart_data)
-        chart_data1 = pd.DataFrame(
-            {
-                "Departamentos":list(df['Departamento'])
-                "Cantidad":df['Cantidad']
-            }
-        )
-        st.bar_chart(chart_data1, x="Departamento", y="Cantidad")
     elif option0 == "2023":
         df = pd.read_csv("df_si_aceptan_peru_mar23.csv")
         df[['Departamento',"Donacion","Cantidad"]]

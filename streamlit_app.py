@@ -64,7 +64,7 @@ with pestaña4:
         df = pd.read_csv("df_si_aceptan_peru_mar23.csv")
         df[['Departamento',"Donacion","Cantidad"]]
         chart_data = pd.DataFrame(
-            {"Departamentos": list(dep), "Cantidad": np.random.randn(20)}
+            {"Departamentos": dep, "Cantidad": np.random.randn(20)}
         )
         st.bar_chart(
             chart_data, x="Departamentos", y=["Cantidad"]

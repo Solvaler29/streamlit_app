@@ -58,7 +58,6 @@ with pestaña4:
         ("2022","2023"))
     if option0 == "2022":
         dep = ["Áncash","Amazonas","Apurímac","Arequipa","Ayacucho","Cajamarca","Callao","Cusco","Huánuco","Huancavelica","Ica","Junín","La Libertad","Lambayeque","Lima","Loreto","Madre de Dios","Moquegua","Pasco","Piura","Puno","San Martín","Tacna","Tumbes",""]
-        print(dep)
         chart_data = pd.DataFrame(np.random.randn(25, 1), columns=["cantidad"])
         st.bar_chart(chart_data)
     elif option0 == "2023":
@@ -66,6 +65,12 @@ with pestaña4:
         df[['Departamento',"Donacion","Cantidad"]]
         chart_data = pd.DataFrame(np.random.randn(25, 1), columns=["cantidad"])
         st.bar_chart(chart_data)
+        chart_data = pd.DataFrame(
+            {"col1": list(range(20)), "col2": np.random.randn(20), "col3": np.random.randn(20)}
+        )
+        st.bar_chart(
+            chart_data, x="col1", y=["col2", "col3"], color=["#FF0000", "#0000FF"]  # Optional
+        )
 
 with pestaña5:
     st.title("Condición de donante de órganos por países")

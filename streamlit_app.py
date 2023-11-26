@@ -57,8 +57,6 @@ with pestaña4:
         "Elige un año",
         ("2022","2023"))
     if option0 == "2022":
-        df = pd.read_csv("marzo2022de18a80años(1).csv")
-        df[['Departamento',"C_Donacion","Cantidad"]]
         dep = ["Áncash","Amazonas","Apurímac","Arequipa","Ayacucho","Cajamarca","Callao","Cusco","Huánuco","Huancavelica","Ica","Junín","La Libertad","Lambayeque","Lima","Loreto","Madre de Dios","Moquegua","Pasco","Piura","Puno","San Martín","Tacna","Tumbes",""]
         print(dep)
         chart_data = pd.DataFrame(np.random.randn(25, 1), columns=["cantidad"])

@@ -60,11 +60,11 @@ with pestaña4:
         chart_data = pd.DataFrame(np.random.randn(25, 1), columns=["cantidad"])
         st.bar_chart(chart_data)
     elif option0 == "2023":
-        dep = ["Áncash","Amazonas","Apurímac","Arequipa","Ayacucho","Cajamarca","Callao","Cusco","Huánuco","Huancavelica","Ica","Junín","La Libertad","Lambayeque","Lima","Loreto","Madre de Dios","Moquegua","Pasco","Piura","Puno","San Martín","Tacna","Tumbes",""]
+                dep = ["Áncash","Amazonas","Apurímac","Arequipa","Ayacucho","Cajamarca","Callao","Cusco","Huánuco","Huancavelica","Ica","Junín","La Libertad","Lambayeque","Lima","Loreto","Madre de Dios","Moquegua","Pasco","Piura","Puno","San Martín","Tacna","Tumbes",""]
         df = pd.read_csv("df_si_aceptan_peru_mar23.csv")
         df[['Departamento',"Donacion","Cantidad"]]
         chart_data = pd.DataFrame(
-            {"Departamentos": dep, "Cantidad": np.random.randn(20)}
+            {"Departamentos": list(range(25)), "Cantidad": np.random.randn(20)}
         )
         st.bar_chart(
             chart_data, x="Departamentos", y=["Cantidad"]

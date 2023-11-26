@@ -61,8 +61,8 @@ with pestaña4:
         df[['Departamento',"C_Donacion","Cantidad"]]
         chart_data = pd.DataFrame(
             {
-                'Cantidad' : [11657,109422,16666,185178,31964,62131,62131,95125,13218,29837,95206,58440,186959,110010,1575708,41149,20438,18486,14127,134095,38182,51936,27444,16078,40806]
-                'Departamentos' : ["Amazonas","Áncash","Apurímac","Arequipa","Ayacucho","Callao","Cajamarca","Cuzco","Huancavelica","Huánuco","Ica","Junín","La Libertad","Lambayeque","Lima","Loreto","Madre de Dios","Moquegua","Pasco","Piura","Puno","San Martín","Tacna","Tumbes","Ucayali"]
+                "Cantidad" : [11657,109422,16666,185178,31964,62131,62131,95125,13218,29837,95206,58440,186959,110010,1575708,41149,20438,18486,14127,134095,38182,51936,27444,16078,40806]
+                "Departamentos" : ["Amazonas","Áncash","Apurímac","Arequipa","Ayacucho","Callao","Cajamarca","Cuzco","Huancavelica","Huánuco","Ica","Junín","La Libertad","Lambayeque","Lima","Loreto","Madre de Dios","Moquegua","Pasco","Piura","Puno","San Martín","Tacna","Tumbes","Ucayali"]
             
             }
         )

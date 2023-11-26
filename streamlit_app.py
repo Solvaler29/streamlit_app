@@ -67,7 +67,7 @@ with pestaña4:
         )
         st.caption("Los datos de este gráfico no están actualizados a la fecha actual.")
         st.write("")
-        st.write("El gráfico muestra la cantidad de personas que aceptaron donar sus órganos durante el año 2023.")
+        st.write("El gráfico muestra la cantidad de personas que aceptaron donar sus órganos durante el año 2022.")
     elif option0 == "2023":
         lista1 = ["Áncash","Amazonas","Apurímac","Arequipa","Ayacucho","Cajamarca","Callao","Cusco","Huánuco","Huancavelica","Ica","Junín","La Libertad","Lambayeque","Lima","Loreto","Madre de Dios","Moquegua","Pasco","Piura","Puno","San Martín","Tacna","Tumbes","Ucayali"]        
         lista2 = [330327,37044,52656,569256,100173,194589,480840,295122,93783,39540,294624,184767,575133,338070,4796229,128385,62340,57219,43278,417759,116577,160161,84144,50082,126999]

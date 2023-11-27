@@ -71,7 +71,7 @@ with pestaña4:
         lista1 = ["Áncash","Amazonas","Apurímac","Arequipa","Ayacucho","Cajamarca","Callao","Cusco","Huancavelica","Huánuco","Ica","Junín","La Libertad","Lambayeque","Lima","Loreto","Madre de Dios","Moquegua","Pasco","Piura","Puno","San Martín","Tacna","Tumbes","Ucayali"]        
         lista2 = [32613,12022,13986,26109,19263,25839,2646,28163,14731,17237,14224,23653,23706,12892,42111,12726,3489,4660,7607,19516,20609,20922,5834,4272,5693,32613,5693]
         chart_data = pd.DataFrame(
-            {"Departamento": list(lista1[:24]), "Cantidad": list(lista2[:24])}
+            {"Departamento": list(lista1[0:25]), "Cantidad": list(lista2[0:25])}
         )
         st.bar_chart(
             chart_data, x="Departamento", y=["Cantidad"]

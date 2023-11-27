@@ -57,8 +57,8 @@ with pestaña4:
         "Elige un año",
         ("2022","2023"))
     if option0 == "2022":
-        lista1 = ["Áncash","Amazonas","Apurímac","Arequipa","Ayacucho","Cajamarca","Callao","Cusco","Huánuco","Huancavelica","Ica","Junín","La Libertad","Lambayeque","Lima","Loreto","Madre de Dios","Moquegua","Pasco","Piura","Puno","San Martín","Tacna","Tumbes","Ucayali"]
-        lista2 = [330327,37044,52656,569256,100173,194589,480840,295122,93783,39540,294624,184767,575133,338070,4796229,128385,62340,57219,43278,417759,116577,160161,84144,50082,126999]
+        lista1 = ["Áncash","Amazonas","Apurímac","Arequipa","Ayacucho","Cajamarca","Callao","Cusco","Huancavelica","Huánuco","Ica","Junín","La Libertad","Lambayeque","Lima","Loreto","Madre de Dios","Moquegua","Pasco","Piura","Puno","San Martín","Tacna","Tumbes","Ucayali"]
+        lista2 = [437356,47620,60638,560103,97159,188313,157847,190839,26419,57707,95206,58440,186959,110010,1575708,41149,20438,18486,14127,134095,38182,51936,27444,16078,40806]
         chart_data = pd.DataFrame(
             {"Departamento": list(lista1[0:25]), "Cantidad": list(lista2[0:25])}
         )

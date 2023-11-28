@@ -5,7 +5,6 @@ from PIL import Image
 import altair as alt
 
 #data del 2022
-df4= pd.read_csv("/content/marzo2022de18a80años(1).csv")
 df5= pd.read_csv("/content/Junio2022de18a80años.csv")
 df6= pd.read_csv("/content/septiembre2022de18a80años.csv")
 df7= pd.read_csv("/content/diciembre2022de18a80años.csv")

@@ -3,6 +3,18 @@ import pandas as pd
 import numpy as np
 from PIL import Image
 import altair as alt
+#data del 2023(falta diciembre)
+df1 = pd.read_csv("/content/16_OPP_2023_Mar_donacion.csv", encoding='utf-8')
+df2 = pd.read_csv("/content/16_OPP_2023_Jun_donacion_0.csv", encoding='utf-8')
+df3 = pd.read_csv("/content/16_OPP_2023_09.03.csv", encoding='utf-8')
+
+#data del 2022
+df4= pd.read_csv("/content/marzo2022de18a80años.csv")
+df5= pd.read_csv("/content/Junio2022de18a80años.csv")
+df6= pd.read_csv("/content/septiembre2022de18a80años.csv")
+df7= pd.read_csv("/content/diciembre2022de18a80años.csv")
+df7 = df7.rename(columns={"Donacion": "C_Donacion"})
+
 
 titulos_pestanas = ['Página principal', 'Nacional', 'Internacional','Departamentos','Países','Sobre nosotras']
 pestaña1, pestaña2, pestaña3, pestaña4, pestaña5, pestaña6 = st.tabs(titulos_pestanas)
@@ -29,7 +41,30 @@ with pestaña2:
         left_column, right_column = st.columns(2)
         with left_column:
             st.button("2022", type="secondary")
-            chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
+            merged_df = pd.concat([df1, df2, df3], ignore_index=True)
+
+            # Filtrar las filas donde la edad esté entre 18 y 80 años
+            filtered_df = merged_df[(merged_df['Edad'] >17) & (merged_df['Edad'] < 81)]
+            filtered_df = filtered_df[(filtered_df['Donacion'] == "Si acepta donar")]
+            filtered_df = filtered_df[(filtered_df['Residencia'] == "Extranjero")]
+
+            repeticiones_por_fila = filtered_df.groupby(['Continente']).size().reset_index(name='Donantes')
+            fila_max_repeticiones = repeticiones_por_fila.loc[repeticiones_por_fila.groupby(['Continente'])['Donantes'].idxmax()]
+            print(fila_max_repeticiones)
+            st.figure(figsize=(10, 6))
+            bar_chart = st.bar_chart(fila_max_repeticiones['Donantes'])
+
+            # Configurar etiquetas y título
+            st.xlabel('Continente')
+            st.ylabel('Cantidad de donantes')
+            st.title('Máxima repetición de donantes por departamento')
+            st.xticks(rotation=90)
+            st.tight_layout()
+
+            # Mostrar el gráfico con Streamlit
+            st.pyplot()
+
+
             st.bar_chart(chart_data)
         with right_column:
             st.button("2023", type="secondary")

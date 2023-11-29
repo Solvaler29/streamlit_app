@@ -52,7 +52,15 @@ with pestaña2:
             print(fila_max_repeticiones)
             st.figure(figsize=(10, 6))
             bar_chart = st.bar_chart(fila_max_repeticiones['Donantes'])
+            # Configurar etiquetas y título
+            st.xlabel('Continente')
+            st.ylabel('Cantidad de donantes')
+            st.title('Máxima repetición de donantes por departamento')
+            st.xticks(rotation=90)
+            st.tight_layout()
 
+            # Mostrar el gráfico con Streamlit
+            st.pyplot()
 
         with right_column:
             st.button("2023", type="secondary")

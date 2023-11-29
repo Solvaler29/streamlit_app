@@ -4,6 +4,11 @@ import numpy as np
 from PIL import Image
 import altair as alt
 
+#data del 2023(falta diciembre)
+df1 = pd.read_csv("df_si_aceptan_peru_mar23.csv", encoding='utf-8')
+df2 = pd.read_csv("df_si_aceptan_peru_jun23.csv", encoding='utf-8')
+df3 = pd.read_csv("df_si_aceptan_peru_set23.csv", encoding='utf-8')
+
 #data del 2022
 df5= pd.read_csv("Junio2022de18a80años.csv")
 df6= pd.read_csv("septiembre2022de18a80años.csv")

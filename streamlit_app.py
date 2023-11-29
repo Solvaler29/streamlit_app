@@ -58,10 +58,9 @@ with pestaña2:
             st.title('Máxima repetición de donantes por departamento')
             st.xticks(rotation=90)
             st.tight_layout()
-
             # Mostrar el gráfico con Streamlit
             st.pyplot()
-
+            st.bar_chart(chart_data)
         with right_column:
             st.button("2023", type="secondary")
             chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])

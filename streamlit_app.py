@@ -40,8 +40,8 @@ with pestaña2:
         left_column, right_column = st.columns(2)
         with left_column:
             st.button("2022", type="secondary")
-            chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
-            st.bar_chart(chart_data)
+            merged_df = pd.concat([df1, df2, df3], ignore_index=True)
+
         with right_column:
             st.button("2023", type="secondary")
             chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])

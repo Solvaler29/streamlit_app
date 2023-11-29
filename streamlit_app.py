@@ -41,6 +41,10 @@ with pestaña2:
         with left_column:
             st.button("2022", type="secondary")
             merged_df = pd.concat([df1, df2, df3], ignore_index=True)
+            # Filtrar las filas donde la edad esté entre 18 y 80 años
+            filtered_df = merged_df[(merged_df['Edad'] >17) & (merged_df['Edad'] < 81)]
+            filtered_df = filtered_df[(filtered_df['Donacion'] == "Si acepta donar")]
+            filtered_df = filtered_df[(filtered_df['Residencia'] == "Extranjero")]
 
         with right_column:
             st.button("2023", type="secondary")

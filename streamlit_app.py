@@ -40,11 +40,19 @@ with pestaña2:
         left_column, right_column = st.columns(2)
         with left_column:
             st.button("2022", type="secondary")
+            chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
+            st.bar_chart(chart_data)
             merged_df = pd.concat([df1, df2, df3], ignore_index=True)
             # Filtrar las filas donde la edad esté entre 18 y 80 años
             filtered_df = merged_df[(merged_df['Edad'] >17) & (merged_df['Edad'] < 81)]
             filtered_df = filtered_df[(filtered_df['Donacion'] == "Si acepta donar")]
             filtered_df = filtered_df[(filtered_df['Residencia'] == "Extranjero")]
+            repeticiones_por_fila = filtered_df.groupby(['Continente']).size().reset_index(name='Donantes')
+            fila_max_repeticiones = repeticiones_por_fila.loc[repeticiones_por_fila.groupby(['Continente'])['Donantes'].idxmax()]
+            print(fila_max_repeticiones)
+            st.figure(figsize=(10, 6))
+            bar_chart = st.bar_chart(fila_max_repeticiones['Donantes'])
+
 
         with right_column:
             st.button("2023", type="secondary")
